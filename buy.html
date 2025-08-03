@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwapmyBook - Buy Books</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        
+        .search-section {
+            background-color: #0d6efd;
+            padding: 30px 0;
+            margin-bottom: 30px;
+        }
+        
+        .search-box {
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        
+        .filter-sidebar {
+            background: white;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+        }
+        
+        .book-card {
+            background: white;
+            margin-bottom: 20px;
+        }
+        
+        .book-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .price-badge {
+            background: #198754;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .category-badge {
+            background: #e9ecef;
+            color: #666;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <div class="row g-2">
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" placeholder="Search by book title, author, or ISBN">
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option selected>Select Standard</option>
+                            <option>1st Standard</option>
+                            <option>2nd Standard</option>
+                            <option>3rd Standard</option>
+                            <option>4th Standard</option>
+                            <option>5th Standard</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option selected>All Categories</option>
+                            <option>Textbooks</option>
+                            <option>Fiction</option>
+                            <option>Non-Fiction</option>
+                            <option>Reference</option>
+                        </select>
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-dark w-100">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <div class="container">
+        <div class="row g-4">
+            <!-- Filters Sidebar -->
+            <div class="col-lg-3">
+                <div class="filter-sidebar">
+                    <h5 class="mb-3">Filters</h5>
+                    <div class="mb-3">
+                        <h6 class="mb-2">Price Range</h6>
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <input type="number" class="form-control" placeholder="Min">
+                            </div>
+                            <div class="col-6">
+                                <input type="number" class="form-control" placeholder="Max">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="mb-2">Condition</h6>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="new">
+                            <label class="form-check-label" for="new">New</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="likeNew">
+                            <label class="form-check-label" for="likeNew">Like New</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="good">
+                            <label class="form-check-label" for="good">Good</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="fair">
+                            <label class="form-check-label" for="fair">Fair</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-100">Apply Filters</button>
+                </div>
+            </div>
+
+            <!-- Books Grid -->
+            <div class="col-lg-9">
+                <div class="row">
+                    <!-- Sample Books -->
+                    <div class="col-md-4">
+                        <div class="card book-card">
+                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f" class="card-img-top" alt="Book">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">Mathematics - Grade 10</h5>
+                                    <span class="price-badge">₹299</span>
+                                </div>
+                                <p class="card-text text-muted mb-3">NCERT</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="category-badge">Textbook</span>
+                                    <button class="btn btn-outline-primary btn-sm">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card book-card">
+                            <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e" class="card-img-top" alt="Book">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">Science - Grade 8</h5>
+                                    <span class="price-badge">₹249</span>
+                                </div>
+                                <p class="card-text text-muted mb-3">NCERT</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="category-badge">Textbook</span>
+                                    <button class="btn btn-outline-primary btn-sm">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card book-card">
+                            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765" class="card-img-top" alt="Book">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">English Literature</h5>
+                                    <span class="price-badge">₹199</span>
+                                </div>
+                                <p class="card-text text-muted mb-3">Class 9</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="category-badge">Textbook</span>
+                                    <button class="btn btn-outline-primary btn-sm">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Load navigation
+        $(document).ready(function(){
+            $("#nav-placeholder").load("nav.html", function() {
+                // Highlight current page in navigation
+                $(".nav-link").each(function() {
+                    if ($(this).attr("href") === location.pathname.split("/").pop()) {
+                        $(this).addClass("active");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

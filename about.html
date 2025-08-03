@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwapmyBook - About</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2196F3;
+            --accent-color: #FF9800;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+        }
+        
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        .about-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .stats-card {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+        
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- About Section -->
+    <div class="container py-5">
+        <div class="about-section">
+            <div class="text-center mb-5">
+                <h1 class="display-4 mb-3">About SwapmyBook</h1>
+                <p class="lead text-muted">Making textbook exchange simple and affordable for students</p>
+            </div>
+
+            <!-- Features -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-book"></i>
+                        <h4>Wide Selection</h4>
+                        <p class="text-muted">Access to thousands of textbooks across different subjects and standards</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-currency-rupee"></i>
+                        <h4>Save Money</h4>
+                        <p class="text-muted">Buy and sell used textbooks at reasonable prices</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-shield-check"></i>
+                        <h4>Safe & Secure</h4>
+                        <p class="text-muted">Verified sellers and secure transactions</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="stats-card">
+                        <div class="stats-number">5000+</div>
+                        <div>Active Users</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-card">
+                        <div class="stats-number">10000+</div>
+                        <div>Books Listed</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-card">
+                        <div class="stats-number">2000+</div>
+                        <div>Successful Exchanges</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission -->
+            <div class="text-center mt-5">
+                <h3 class="mb-4">Our Mission</h3>
+                <p class="text-muted">SwapmyBook aims to create a sustainable ecosystem for textbook exchange, making education more accessible and affordable for students across India. We believe in promoting the reuse of books while building a community of knowledge sharing.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Load navigation
+        $(document).ready(function(){
+            $("#nav-placeholder").load("nav.html", function() {
+                // Highlight current page in navigation
+                $(".nav-link").each(function() {
+                    if ($(this).attr("href") === location.pathname.split("/").pop()) {
+                        $(this).addClass("active");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

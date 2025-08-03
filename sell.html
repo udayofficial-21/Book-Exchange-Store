@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwapmyBook - Sell Books</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        
+        .sell-form {
+            background: white;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+        }
+        
+        .upload-area {
+            border: 1px dashed #dee2e6;
+            padding: 20px;
+            text-align: center;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Sell Form Section -->
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="sell-form">
+                    <h2 class="mb-4">List Your Book for Sale</h2>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Book Title</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Author</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Price (₹)</label>
+                                    <input type="number" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Category</label>
+                                    <select class="form-select">
+                                        <option>Textbook</option>
+                                        <option>Fiction</option>
+                                        <option>Non-Fiction</option>
+                                        <option>Reference</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Book Condition</label>
+                                    <select class="form-select">
+                                        <option>New</option>
+                                        <option>Like New</option>
+                                        <option>Very Good</option>
+                                        <option>Good</option>
+                                        <option>Fair</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Description</label>
+                                    <textarea class="form-control" rows="4"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Book Images</label>
+                                    <div class="upload-area">
+                                        <i class="bi bi-cloud-upload"></i>
+                                        <p class="mb-0 mt-2">Click to upload images</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Pickup Address</label>
+                                    <textarea class="form-control" rows="3" required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">List Book for Sale</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Load navigation
+        $(document).ready(function(){
+            $("#nav-placeholder").load("nav.html", function() {
+                // Highlight current page in navigation
+                $(".nav-link").each(function() {
+                    if ($(this).attr("href") === location.pathname.split("/").pop()) {
+                        $(this).addClass("active");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
